@@ -88,7 +88,7 @@
 
 	<!-- START HERO -->
 	<section class="hero is-dark is-medium"
-		style="background-image: url('header.jpg');background-position: center;background-size: cover;background-repeat: no-repeat;">
+		style="background-image: url('/assets/thumbnails/banner.jpg');background-position: center;background-size: cover;background-repeat: no-repeat;">
 		<div class="hero-body">
 			<div class="container has-text-centered">
 				<h1 class="title">Escuteiros de Unhais da Serra</h1>
@@ -122,53 +122,23 @@
 				</div>
 				<div class="column is-half">
 					<h1 class="title">Últimas atividades</h1>
-					<div class="columns is-desktop is-multiline">
-						<!-- AGR: Abertura do Ano Escutista -->
-						<div class="column is-half-desktop">
-							<div class="card">
-								<header class="card-header">
-									<p class="card-header-title">
-										AGR: Abertura do Ano Escutista
-									</p>
-								</header>
-								<div class="card-image">
-									<figure class="image is-5by4square">
-										<img src="fotos/thumbnails/20201024_AGR.jpg">
+					<div class="container" x-data="getData()" x-init="fetchData()">
+						<template x-if="!isLoading" x-for="year in years">
+							<template x-for="line in albums.get(year)">
+								<article class="media">
+									<figure class="image media-left is-128x128">
+										<img :src="line[4]">
 									</figure>
-								</div>
-								<div class="card-content">
-									<b>Data:</b> 24/Out/2020<br>
-									<b>Local:</b> Unhais da Serra
-								</div>
-								<footer class="card-footer">
-									<a class="card-footer-item" href="https://photos.app.goo.gl/9kuJXefdF4uCjtWk9"
-										target="_blank">Ver fotos</a>
-								</footer>
-							</div>
-						</div>
-						<!-- PIO/CAM: Grande Empreendimento/Caminhada -->
-						<div class="column is-half-desktop">
-							<div class="card">
-								<header class="card-header">
-									<p class="card-header-title">
-										PIO/CAM: Grande Empreendimento/Caminhada
-									</p>
-								</header>
-								<div class="card-image">
-									<figure class="image is-5by4square">
-										<img src="fotos/thumbnails/20200813_PIOCAM.jpg">
-									</figure>
-								</div>
-								<div class="card-content">
-									<b>Data:</b> 13-18/Ago/2020<br>
-									<b>Local:</b> São Miguel, Açores
-								</div>
-								<footer class="card-footer">
-									<a class="card-footer-item" href="https://photos.app.goo.gl/uJLMXUNSNmoaSNdp8"
-										target="_blank">Ver fotos</a>
-								</footer>
-							</div>
-						</div>
+									<div class="media-content">
+										<strong x-text="line[0]"></strong>
+										<p x-text="line[2]"></p>
+										<p x-text="line[1]"></p>
+										<br>
+										<a class="button is-link is-light is-rounded" :href="line[3]" target="_blank">Ver fotos</a>
+									</div>
+								</article>
+							</template>
+						</template>
 					</div>
 				</div>
 			</div>
