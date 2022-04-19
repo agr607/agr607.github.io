@@ -123,8 +123,8 @@
 				<div class="column is-half">
 					<h1 class="title">Últimas atividades</h1>
 					<div class="container" x-data="getData()" x-init="fetchData()">
-						<template x-if="!isLoading" x-for="year in years">
-							<template x-for="line in albums.get(year)">
+						<template x-if="!isLoading">
+							<template x-for="line in albums.get(year[0])">
 								<article class="media">
 									<figure class="image media-left is-128x128">
 										<img :src="line[4]">
