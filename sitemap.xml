@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://607.escutismo.pt/</loc>
+		<lastmod>2020-07-12T23:36:45+00:00</lastmod>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://607.escutismo.pt/fotos/</loc>
+		<lastmod>2020-07-12T23:49:49+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://607.escutismo.pt/pernoitas/</loc>
+		<lastmod>2020-07-12T23:49:26+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://607.escutismo.pt/contactos/</loc>
+		<lastmod>2020-07-12T23:50:15+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+</urlset>

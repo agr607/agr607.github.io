@@ -1,23 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escuteiros de Unhais da Serra</title>
-</head>
-<body>
-    <h1>Hello!!</h1>
-    <div id="app">
-        <p>{{ nome }}</p>
-        <p>{{ data }}</p>
-        <p>{{ link }}</p>
-        <p>{{ number }}</p>
-        <button @click="number++">Increase</button>
-    </div>
 
-    <!-- CHANGE THIS TO PROD -->
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="app.js"></script>
+<html lang="pt-PT">
+
+<head>
+	<title>Escuteiros de Unhais da Serra</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+	<meta name="keywords"
+		content="escuteiros, escutismo, unhais da serra, serra da estrela, acampar, acantonar, covilhã">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- CSS -->
+	<link rel="stylesheet" href="/assets/css/bulma.min.css">
+	<link rel="stylesheet" href="/assets/css/bulma-timeline.min.css">
+	<!-- JS -->
+	<script defer type="text/javascript" src="/assets/js/bulma.js"></script>
+	<script defer type="text/javascript" src="/assets/js/alpine.min.js"></script>
+	<script src="/assets/js/app.js"></script>
+</head>
+
+<body style="background: #F0F2F4;">
+	<!-- START NAV -->
+	<nav class="navbar is-fixed-top is-dark" style="background-color:rgba(54, 54, 54, 0.8);">
+		<div class="container">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">
+					<img src="assets/img/logo.png" width="200" height="30">
+				</a>
+				<span class="navbar-burger burger" data-target="navbarMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</div>
+			<div id="navbarMenu" class="navbar-menu">
+				<div class="navbar-end">
+					<a class="navbar-item is-active" href="/">
+						Home
+					</a>
+					<a class="navbar-item" href="/fotos/">
+						Fotos
+					</a>
+					<a class="navbar-item" href="/pernoitas/">
+						Pernoitas
+					</a>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">
+							Recursos
+						</a>
+						<div class="navbar-dropdown is-right">
+							<a class="navbar-item" href="/assets/pdf/plano-2021-2022.pdf" target="_blank">
+								Plano de Atividades 2021/2022
+							</a>
+							<a class="navbar-item" href="/assets/pdf/guia-uniforme.pdf" target="_blank">
+								Guia do Uniforme
+							</a>
+							<a class="navbar-item" href="https://drive.google.com/drive/folders/0BxkLVKYLNU_Nc3pJMElDRGdULUk?usp=sharing" target="_blank">
+								Cancioneiro
+							</a>
+							<hr class="navbar-divider">
+							<a class="navbar-item" href="https://escutismo.pt/" target="_blank">
+								Website do Corpo Nacional de Escutas
+							</a>
+							<a class="navbar-item" href="http://www.freguesiaunhaisdaserra.pt/" target="_blank">
+								Website da Freguesia de Unhais da Serra
+							</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="/contactos/">
+						Contactos
+					</a>
+					<a class="navbar-item" href="https://pt-pt.facebook.com/Agr607" target="_blank">
+						<img src="assets/img/facebook.svg" height="30">
+					</a>
+					<a class="navbar-item" href="https://www.youtube.com/channel/UC5MQvQMRh1Ax1UzRzcc5rOw"
+						target="_blank">
+						<img src="assets/img/youtube.svg" height="30">
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- END NAV -->
+
+	<!-- START HERO -->
+	<section class="hero is-dark is-medium"
+		style="background-image: url('header.jpg');background-position: center;background-size: cover;background-repeat: no-repeat;">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title">Escuteiros de Unhais da Serra</h1>
+				<h2 class="subtitle">40 anos que nos unem</h2>
+			</div>
+		</div>
+	</section>
+	<!-- END HERO -->
+
+	<!-- START CONTENT -->
+	<section class="section">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-half">
+					<h1 class="title">Quem somos?</h1>
+					<div class="box">
+						<div class="content">
+							Nascido na vila de Unhais da Serra, incrustada na base da Serra da Estrela a 660 metros de
+							altitude,
+							encontra-se o Agrupamento 607.
+							<br><br>
+							A vontade de muitos levou à sua oficialização a 29 de Junho de 1980, com a investidura de 4
+							dirigentes e 3
+							escuteiros.
+							<br><br>
+							Olhando no presente para um passado que a todos nos orgulha, ansiamos um futuro de grandes
+							feitos
+							protagonizados por esta "Família Escutista".
+						</div>
+					</div>
+				</div>
+				<div class="column is-half">
+					<h1 class="title">Últimas atividades</h1>
+					<div class="columns is-desktop is-multiline">
+						<!-- AGR: Abertura do Ano Escutista -->
+						<div class="column is-half-desktop">
+							<div class="card">
+								<header class="card-header">
+									<p class="card-header-title">
+										AGR: Abertura do Ano Escutista
+									</p>
+								</header>
+								<div class="card-image">
+									<figure class="image is-5by4square">
+										<img src="fotos/thumbnails/20201024_AGR.jpg">
+									</figure>
+								</div>
+								<div class="card-content">
+									<b>Data:</b> 24/Out/2020<br>
+									<b>Local:</b> Unhais da Serra
+								</div>
+								<footer class="card-footer">
+									<a class="card-footer-item" href="https://photos.app.goo.gl/9kuJXefdF4uCjtWk9"
+										target="_blank">Ver fotos</a>
+								</footer>
+							</div>
+						</div>
+						<!-- PIO/CAM: Grande Empreendimento/Caminhada -->
+						<div class="column is-half-desktop">
+							<div class="card">
+								<header class="card-header">
+									<p class="card-header-title">
+										PIO/CAM: Grande Empreendimento/Caminhada
+									</p>
+								</header>
+								<div class="card-image">
+									<figure class="image is-5by4square">
+										<img src="fotos/thumbnails/20200813_PIOCAM.jpg">
+									</figure>
+								</div>
+								<div class="card-content">
+									<b>Data:</b> 13-18/Ago/2020<br>
+									<b>Local:</b> São Miguel, Açores
+								</div>
+								<footer class="card-footer">
+									<a class="card-footer-item" href="https://photos.app.goo.gl/uJLMXUNSNmoaSNdp8"
+										target="_blank">Ver fotos</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END CONTENT -->
+
+	<!-- START FOOTER -->
+	<footer class="footer has-text-light" style="background-color:rgba(54, 54, 54, 0.8)">
+		<div class="content has-text-centered is-small">
+			Agrupamento 607 do Corpo Nacional de Escutas<br>
+			Unhais da Serra, 1980 - 2022 &copy; Todos os direitos reservados
+		</div>
+	</footer>
+	<!-- END FOOTER -->
 </body>
+
 </html>
