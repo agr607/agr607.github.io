@@ -124,22 +124,22 @@
 					<h1 class="title">Últimas atividades</h1>
 					<div class="container" x-data="getData()" x-init="fetchData()">
 						<template x-if="!isLoading">
+							<div class="box">
 							<template x-for="line in albums.get(years[0])">
-								<div class="box">
-									<article class="media">
-										<figure class="image media-left is-128x128">
-											<img :src="line[4]">
-										</figure>
-										<div class="media-content">
-											<strong x-text="line[0]"></strong>
-											<p x-text="line[2]"></p>
-											<p x-text="line[1]"></p>
-											<br>
-											<a class="button is-link is-light is-rounded" :href="line[3]" target="_blank">Ver fotos</a>
-										</div>
-									</article>
-								</div>
+								<article class="media">
+									<figure class="image media-left is-128x128">
+										<img :src="line[4]">
+									</figure>
+									<div class="media-content">
+										<strong x-text="line[0]"></strong>
+										<p x-text="line[2]"></p>
+										<p x-text="line[1]"></p>
+										<br>
+										<a class="button is-link is-light is-rounded" :href="line[3]" target="_blank">Ver fotos</a>
+									</div>
+								</article>
 							</template>
+							</div>
 						</template>
 					</div>
 				</div>
