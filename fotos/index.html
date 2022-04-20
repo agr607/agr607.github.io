@@ -106,22 +106,22 @@
 	<section class="section" x-data="getData()" x-init="fetchData()">
 		<div class="container">
 			<template x-if="!isLoading" x-for="year in years">
-				<div>
-				<span class="tag is-link is-large is-rounded block" x-text="year"></span>
-				<template x-for="line in albums.get(year)">
-					<article class="media">
-						<figure class="image media-left is-128x128">
-							<img :src="line[4]">
-						</figure>
-						<div class="media-content">
-							<strong x-text="line[0]"></strong>
-							<p x-text="line[2]"></p>
-							<p x-text="line[1]"></p>
-							<br>
-							<a class="button is-link is-light is-rounded" :href="line[3]" target="_blank">Ver fotos</a>
-						</div>
-					</article>
-				</template>
+				<div class="box">
+					<span class="tag is-link is-large is-rounded block" x-text="year"></span>
+					<template x-for="line in albums.get(year)">
+						<article class="media">
+							<figure class="image media-left is-128x128">
+								<img :src="line[4]">
+							</figure>
+							<div class="media-content">
+								<strong x-text="line[0]"></strong>
+								<p x-text="line[2]"></p>
+								<p x-text="line[1]"></p>
+								<br>
+								<a class="button is-link is-light is-rounded" :href="line[3]" target="_blank">Ver fotos</a>
+							</div>
+						</article>
+					</template>
 				</div>
 			</template>
 		</div>
